@@ -1,0 +1,46 @@
+{
+  "private": true,
+  "scripts": {
+    "dev": "NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "watch": "NODE_ENV=development node_modules/webpack/bin/webpack.js --watch --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "hot": "NODE_ENV=development webpack-dev-server --inline --hot --disable-host-check --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "production": "NODE_ENV=production node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.6.4",
+    "@babel/plugin-syntax-dynamic-import": "^7.2.0",
+    "@fortawesome/fontawesome-free": "^5.11.2",
+    "axios": "^0.18.1",
+    "bootstrap-sass": "^3.4.1",
+    "eslint": "^6.5.1",
+    "eslint-config-prettier": "4.0.0",
+    "eslint-plugin-prettier": "3.0.1",
+    "eslint-plugin-vue": "^5.2.3",
+    "jquery": "^3.4.1",
+    "laravel-mix": "^4.1.4",
+    "lodash": "^4.17.15",
+    "resolve-url-loader": "3.1.0",
+    "sass": "^1.22.6",
+    "sass-loader": "7.*",
+    "vue": "^2.6.10",
+    "vue-template-compiler": "^2.6.10"
+  },
+  "dependencies": {
+    "ajv": "^6.9.1",
+    "algoliasearch": "^3.35.1",
+    "at.js": "^1.5.3",
+    "bulma": "^0.7.5",
+    "font-awesome": "^4.7.0",
+    "imagemin": "^5.3.1",
+    "jquery.caret": "^0.3.1",
+    "laravel-echo": "^1.4.0",
+    "moment": "^2.24.0",
+    "overlayscrollbars": "^1.6.3",
+    "prettier": "1.14.3",
+    "pusher-js": "^4.3.1",
+    "tributejs": "^3.7.3",
+    "trix": "^1.2.0",
+    "vue-instantsearch": "^2.6.0",
+    "vuex": "^3.1.1"
+  }
+}

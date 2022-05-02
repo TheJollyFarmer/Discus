@@ -1,0 +1,13 @@
+import types from "../../../helpers/types";
+
+export default {
+  ADD_DATA: types.SET_DATA,
+  ADD_KEYS: types.ADD_KEYS,
+  ADD_DATUM: types.ADD_DATUM,
+  ADD_KEY: types.ADD_KEY,
+  DELETE_DATUM: types.DELETE_DATUM,
+  INCREMENT_UNREAD_COUNT: types.INCREMENT_UNREAD_COUNT,
+  DECREMENT_UNREAD_COUNT: types.DECREMENT_UNREAD_COUNT,
+  TOGGLE_PROGRESS: types.TOGGLE_PROGRESS,
+  SET_COMPLETED: types.SET_COMPLETED
+};

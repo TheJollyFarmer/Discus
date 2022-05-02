@@ -1,0 +1,31 @@
+{
+  "env": {
+    "node": true
+  },
+  "parserOptions": {"parser": "babel-eslint"},
+  "extends": [
+    "plugin:vue/recommended",
+    "plugin:prettier/recommended",
+    "eslint:recommended"
+  ],
+  "rules": {
+    "func-names": [
+      "error",
+      "never"
+    ],
+    "no-console": 0,
+    "no-unused-vars": "off",
+    "vue/html-closing-bracket-spacing": [
+      "error",
+      {
+        "selfClosingTag": "never"
+      }
+    ],
+    "vue/html-closing-bracket-newline": [
+      "error",
+      {
+        "multiline": "never"
+      }
+    ]
+  }
+}

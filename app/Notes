@@ -1,0 +1,16 @@
+// NOTES
+
+=> Consider figuring out how to trigger UserHasNewFriend event for seeding.
+=> Make Tribute work with Trix - NEW!
+=> Add confirmation box for delete thread button? And others?
+=> Check front-end implementation of santisation package.
+    => Check rules on the back-end.
+=> Check functionality of image uploads.
+=> Jeffrey removes spam example as it fails with code on thread creation.
+    => Fix this, or remove as Jeffrey does.
+=> Add queueing for Scout - if not fixed by working through PRs.
+=> Implement proper admin panel and user panel?
+=> Go through each PR on the Github Council project.
+=> Add to functionality of seeders?
+=> Make this all work on an actual domain.
+    => Probably Forge, and Digital Ocean.

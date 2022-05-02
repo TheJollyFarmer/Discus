@@ -1,0 +1,397 @@
+@import "~bulma/sass/utilities/all";
+// Typography
+$family-sans-serif: "B612", sans-serif;
+$family-primary: $family-sans-serif;
+
+// Images
+$dimensions: 16 24 32 36 42 48 64 72 96 128 !default;
+
+// Nav
+$navbar-box-shadow-color: #4a4a4a;
+$navbar-box-shadow-size: 0px -2px 20px 0px;
+$navbar-item-img-max-height: inherit;
+
+// Pagination
+$pagination-color: $primary;
+$pagination-border-color: $primary;
+$pagination-current-background-color: $primary;
+$pagination-current-border-color: $primary;
+
+// Links
+$dropdown-item-active-background-color: $white-ter;
+$dropdown-item-active-color: $black;
+
+// Timeline
+$timeline-marker-size: 12px !default;
+$timeline-marker-color: $grey-lighter !default;
+$timeline-marker-icon-size: 24px !default;
+$timeline-marker-border-size: 1px !default;
+$timeline-marker-border: $timeline-marker-border-size solid $timeline-marker-color !default;
+$timeline-line-color: $grey-darker !default;
+$timeline-line-width: 1px !default;
+$timeline-line-style: solid !default;
+$timeline-line: $timeline-line-width $timeline-line-style $timeline-line-color !default;
+$timeline-content-padding: 1em 0 0 2em !default;
+$timeline-rtl-content-padding: 1em 2em 0 0 !default;
+$timeline-icon-size: .75rem !default;
+$timeline-header-width: 4em !default;
+$timeline-item-padding-left: $timeline-header-width / 2 !default;
+$timeline-item-padding-bottom: 0.5em !default;
+$dimensions: 16 24 32 48 64 96 128 !default;
+
+// CSS Helpers
+.mr-1 {
+  margin-right: 1em;
+}
+
+.flex {
+  flex: 1;
+}
+
+[v-cloak] {
+  display: none;
+}
+
+
+// General
+a:not(.delete):not(.dropdown-item), button:not(.is-circle-active), input, .navbar-item, .panel-block {
+  transition-duration: 0.3s;
+  transition-property: background-color, color, opacity;
+  transition-timing-function: ease-in-out;
+}
+
+mark {
+  background-color: white;
+  color: #00d1b2;
+}
+
+.grecaptcha-badge {
+  visibility: hidden;
+}
+
+.ais-InstantSearch {
+  position: relative
+}
+
+.input::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+.section-tabs {
+  overflow: hidden;
+  position: relative;
+}
+
+// CSS Tab Menu Icons
+.userpanel .menu-item .icon {
+  margin-left: 1em;
+}
+
+// CSS Tooltip
+.tooltip {
+  background-color: black;
+  border-radius: 6px;
+  -webkit-box-shadow: 0 2px 3px rgba(10, 10, 10, 0.1), 0 0 0 1px rgba(10, 10, 10, 0.1);
+  box-shadow: 0 2px 3px rgba(10, 10, 10, 0.1), 0 0 0 1px rgba(10, 10, 10, 0.1);
+  color: white;
+  display: block;
+  font-size: 0.8em;
+  padding: 0.5rem;
+  position: absolute;
+  text-transform: capitalize;
+  transition: opacity 0.2s ease-out;
+  opacity: 0;
+  visibility: hidden;
+  white-space: nowrap;
+  z-index: 500;
+  &::after {
+    border-width: 5px;
+    border-style: solid;
+    border-color: black transparent transparent transparent;
+    content: " ";
+    position: absolute;
+  }
+}
+
+.tooltip-multiline {
+  width: 300px;
+  white-space: pre-wrap;
+}
+
+.tooltip-top {
+  bottom: 120%;
+  transform: translateX(-50%);
+  left: 50%;
+  &::after {
+    left: 50%;
+    margin-left: -5px;
+    top: 100%;
+  }
+}
+
+.tooltip-bottom {
+  left: 50%;
+  transform: translateX(-50%);
+  top: 120%;
+  &::after {
+    left: 50%;
+    margin-left: -5px;
+    border-color: transparent transparent black transparent;
+    bottom: 100%;
+  }
+}
+
+.tooltip-left {
+  right: 120%;
+  &::after {
+    top: 50%;
+    margin-top: -5px;
+    border-color: transparent transparent transparent black;
+    left: 100%;
+  }
+}
+
+.tooltip-right {
+  left: 120%;
+  &::after {
+    top: 50%;
+    margin-top: -5px;
+    border-color: transparent black transparent transparent;
+    right: 100%;
+  }
+}
+
+.tooltip-container {
+  position: relative;
+  &:hover .tooltip {
+    opacity: 1;
+    transition: opacity 0.2s ease-in 0.75s;
+    visibility: visible;
+  }
+  > .dropdown.is-active + .tooltip {
+    visibility: hidden;
+  }
+}
+
+// Timeline
+.timeline {
+  display: flex;
+  flex-direction: column;
+  margin: 1em;
+  .timeline-header {
+    display: flex;
+    justify-content: center;
+    min-width: $timeline-header-width;
+    max-width: $timeline-header-width * 2;
+    position: relative;
+    text-align: center;
+    width: $timeline-header-width;
+    word-wrap: normal;
+    &:first-of-type {
+      margin-bottom: 1em;
+      &::before {
+        content: "";
+        background-color: $timeline-line-color;
+        height: 100%;
+        top: 100%;
+        position: absolute;
+        left: 50%;
+        width: $timeline-line-width;
+      }
+    }
+  }
+  .timeline-item {
+    display: flex;
+    position: relative;
+    margin-left: $timeline-item-padding-left;
+    padding-bottom: $timeline-item-padding-bottom;
+    &::before {
+      background-color: $timeline-line-color;
+      content: "";
+      display: block;
+      height: 100%;
+      left: 0;
+      position: absolute;
+      top: 0;
+      width: $timeline-line-width;
+    }
+    .timeline-marker {
+      background: $timeline-marker-color;
+      border: $timeline-marker-border;
+      border-radius: 4px;
+      content: "";
+      display: block;
+      height: $timeline-marker-size;
+      left: -(($timeline-marker-size / 2) - $timeline-marker-border-size / 2);
+      position: absolute;
+      top: 1.2rem;
+      width: $timeline-marker-size;
+      &.is-image {
+        @each $dimension in $dimensions {
+          &.is-#{$dimension}x#{$dimension} {
+            height: $dimension * 1px;
+            left: ( $dimension / 2 ) * -1px;
+            width: $dimension * 1px;
+          }
+        }
+        background: $timeline-marker-color;
+        border: $timeline-marker-border;
+        border-radius: 100%;
+        display: block;
+        overflow: hidden;
+      }
+      &.is-icon {
+        align-items: center;
+        background: $timeline-marker-color;
+        border: $timeline-marker-border;
+        border-radius: 4px;
+        display: flex;
+        height: $timeline-marker-icon-size;
+        left: -(($timeline-marker-icon-size / 2) - $timeline-marker-border-size / 2);
+        line-height: .75rem;
+        justify-content: center;
+        width: $timeline-marker-icon-size;
+        i {
+          color: $white;
+          font-size: $timeline-icon-size !important;
+        }
+      }
+      &.is-outlined {
+        .image {
+          background: $white;
+        }
+        &.is-icon {
+          background: $white;
+          i {
+            color: $timeline-marker-color;
+          }
+        }
+      }
+      @each $name, $pair in $colors {
+        $color: nth($pair, 1);
+        $color-invert: nth($pair, 2);
+        &.is-#{$name} {
+          background-color: $color !important;
+          border-color: $color !important;
+          .image {
+            border-color: $color !important
+          }
+          &.is-icon {
+            background-color: $color !important;
+            border-color: $color !important;
+            i {
+              color: $color-invert !important
+            }
+          }
+          &.is-outlined {
+            background-color: $white !important;
+            border-color: $color !important;
+            .image {
+              background-color: $white !important
+            }
+            &.is-icon {
+              background-color: $white !important;
+              i {
+                color: $color !important
+              }
+            }
+          }
+        }
+      }
+    }
+    .timeline-content {
+      padding: $timeline-content-padding;
+      .heading {
+        font-weight: $weight-semibold;
+      }
+    }
+    @each $name, $pair in $colors {
+      $color: nth($pair, 1);
+      $color-invert: nth($pair, 2);
+      &.is-#{$name} {
+        &::before {
+          background-color: $color
+        }
+      }
+    }
+  }
+  &.is-centered {
+    .timeline-header {
+      align-self: center;
+      display: flex;
+      width: 100%;
+    }
+    .timeline-item {
+      align-self: flex-end;
+      width: 50%;
+      &:nth-of-type(2n) {
+        align-self: flex-start;
+        margin-left: 0;
+        margin-right: $timeline-header-width / 2;
+        &::before {
+          left: auto;
+          right: -$timeline-line-width;
+        }
+        .timeline-marker {
+          left: auto;
+          right: -(($timeline-marker-size / 2) - $timeline-marker-border-size / 2) - $timeline-line-width;
+          &.is-image {
+            @each $dimension in $dimensions {
+              &.is-#{$dimension}x#{$dimension} {
+                left: auto;
+                right: ( $dimension / 2 ) * -1px;
+              }
+            }
+          }
+          &.is-icon {
+            left: auto;
+            right: -(($timeline-marker-icon-size / 2) - $timeline-marker-border-size / 2) - $timeline-line-width;
+          }
+        }
+        .timeline-content {
+          align-items: flex-end;
+          flex-basis: 100%;
+          flex-direction: column;
+          display: flex;
+          padding: $timeline-rtl-content-padding;
+          text-align: right;
+        }
+      }
+      &:nth-of-type(2n+1) {
+        &::before {
+          background-color: $timeline-line-color;
+          content: "";
+          display: block;
+          height: 100%;
+          position: absolute;
+          top: 0;
+          width: $timeline-line-width;
+        }
+      }
+      @each $name, $pair in $colors {
+        $color: nth($pair, 1);
+        $color-invert: nth($pair, 2);
+        &.is-#{$name} {
+          &::before {
+            background-color: $color;
+          }
+        }
+      }
+    }
+  }
+  &.no-headers {
+    .timeline-item {
+      &.is-first {
+        &::before {
+          height: calc(100% - 1.2rem);
+          top: 1.2rem;
+        }
+      }
+      &.is-last {
+        &::before {
+          height: 1.2rem;
+        }
+      }
+    }
+  }
+}
