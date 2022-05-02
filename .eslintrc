@@ -2,7 +2,10 @@
   "env": {
     "node": true
   },
-  "parserOptions": {"parser": "babel-eslint"},
+  "parserOptions": {
+    "requireConfigFile": false,
+    "parser": "@babel/eslint-parser"
+  },
   "extends": [
     "plugin:vue/recommended",
     "plugin:prettier/recommended",
