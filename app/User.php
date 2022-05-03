@@ -7,6 +7,7 @@ use Carbon\Carbon;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Laravel\Scout\Searchable;
+use Storage;
 
 /**
  * Eloquent Model: 'User'
@@ -188,7 +189,7 @@ class User extends Authenticatable
      */
     public function getAvatarPathAttribute($avatar)
     {
-        return asset($avatar ?: '/avatars/default.png');
+        return Storage::url($avatar ?: '/avatars/default.png');
     }
 
     /**

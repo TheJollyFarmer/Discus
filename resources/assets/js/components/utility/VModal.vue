@@ -15,7 +15,7 @@
             class="box">
             <v-avatar
               v-if="modalImage"
-              :path="`http://www.forum.test/images/avatars/${modalImage}.png`"
+              :path="`/storage/avatars/${modalImage}.png`"
               class="modal-img"
               dimension="96"
               circle/>
