@@ -12,7 +12,7 @@ import algoliasearch from "algoliasearch/lite";
 
 const searchClient = algoliasearch(
   process.env.MIX_ALGOLIA_APP_ID,
-  "8abfc862fb95261593b7842250606188"
+  process.env.MIX_ALGOLIA_KEY
 );
 
 export default {

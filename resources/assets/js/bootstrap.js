@@ -25,7 +25,7 @@ Vue.use(InstantSearch);
 Vue.use(Tooltips);
 Vue.prototype.$echo = new Echo({
   broadcaster: "pusher",
-  key: "15179585257818c512fc",
+  key: process.env.MIX_PUSHER_APP_KEY,
   cluster: "eu",
   encrypted: true,
   enabledTransports: ["ws", "wss"]
