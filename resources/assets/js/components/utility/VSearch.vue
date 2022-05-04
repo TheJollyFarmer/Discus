@@ -11,7 +11,7 @@ import { AisInstantSearch } from "vue-instantsearch";
 import algoliasearch from "algoliasearch/lite";
 
 const searchClient = algoliasearch(
-  "R4P9YRNAU6",
+  process.env.MIX_ALGOLIA_APP_ID,
   "8abfc862fb95261593b7842250606188"
 );
 

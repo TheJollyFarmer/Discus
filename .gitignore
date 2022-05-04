@@ -3,7 +3,7 @@
 /public/hot
 /public/css/app.css*
 /public/js
-/public/*.js
+/public/*.js*
 /storage/*.key
 /storage/purify
 /vendor
